@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Steven Gilstead | Final Project</title>
+        <meta charset="utf-8" name="viewport" content="initial-scale=1.0" width="device-width">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles.scss">
+        
+       
+        <script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous" defer></script>
+        <script src="scripts/dice_scripts.js" defer></script>
+    </head>
+    
+    
+<body>
+
+    <article>
+        <h2 id="game-title">Snake Eyes</h2>
+            <div class="max-width">
+                <div class="content-wrapper">
+                    <div id="pop-up" class="pop-up">            
+                        <h3>Game Over</h3>
+                        <p id="game-over"></p>
+                        <button id="close-popup"type="button">Reset Game</button>
+                    </div>
+            
+                <div id="game-area" class="box">
+                    <div id="player1">
+                        <p class = "player1">Player 1</p>
+                        <div class="dice-container">
+                            <img class="playerImage1 dice" src="images/1.png">
+                            <img class="playerImage2 dice" src="images/1.png">
+                        </div>
+                        <div class="score">
+                            <p>Player total: <span id="player1Score"></span></p>   
+                            <div id="playerRoundTracker"></div>
+
+                        </div>
+
+                    </div>
+                    <div id="player2">
+                        <p class = "player1">Opponent</p>
+                        <div class="dice-container">
+                            <img class="computerImage1 dice" src="images/1.png">
+                            <img class="computerImage2 dice" src="images/1.png">  
+                        </div>
+                        <div class="score">
+                        <p>Opponent total: <span id="computerScore"></span></p>
+                        <div id="computerRoundTracker"></div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="button-container">
+                <button type="button" id="roll">Roll</button>
+                <button type="button" id="reset">Reset</button>   
+                </div>
+              
+       
+            </div>
+        </div>
+    </article>
+      
+
+       
+    </body>
+    
+    <footer>
+
+    </footer>
+</html>

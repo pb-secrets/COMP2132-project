@@ -1,0 +1,253 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+@import url("normalize.css");
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+#game-title {
+  font-family: 'Mr Dafoe', cursive;
+}
+
+/* --------------- Website Colors --------------------*/
+/* ------------- General Styles ------------*/
+html {
+  font-size: 16px;
+  font-family: 'Rajdhani', sans-serif;
+  color: #9BC3C3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+header {
+  background-color: #2e5a6b;
+}
+
+body {
+  background-image: linear-gradient(315deg, #d4418e 0%, #0609c5 65%);
+  margin: 0;
+  height: 750px;
+}
+
+h1, h2, h3, h4, h5, h6, p a {
+  color: #F8C708;
+  text-shadow: 0 0 8px rgba(255, 204, 0, 0.356);
+  text-align: center;
+  font-family: MrDafoe-Regular;
+  margin: 20px;
+}
+
+.button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.button-container > * {
+  margin-left: 10px;
+}
+
+.alert {
+  background-color: #e4405f;
+  border: solid red 3px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.alert::before {
+  content: "⚠️";
+}
+
+.scoreTracker {
+  font-family: "Mr Dafoe", cursive;
+  color: #F8C708;
+  font-size: 1.33em;
+}
+
+/*---------------------------- DICE -----------------------------*/
+.dice-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 250px;
+  height: 100px;
+}
+
+.dice {
+  width: 100px;
+}
+
+.results {
+  font-size: 28px;
+  margin-left: 10px;
+}
+
+#game-title {
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 3em;
+  text-shadow: 0 5px 10px #F8C708;
+}
+
+#close-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  left: calc(98% - 26px);
+}
+
+.pop-up {
+  border: 5px solid #F8C708;
+  position: fixed;
+  top: calc(48% - 117.5px);
+  left: calc(50% - 175px);
+  background-color: #0E242C;
+  width: 350px;
+  padding: 10px;
+  z-index: 5;
+  border-radius: 20px;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.pop-up h3 {
+  font-family: "Mr Dafoe", cursive;
+}
+
+.pop-up.fade {
+  opacity: 1;
+}
+
+.game-over {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* --------------------- Medium Viewport --------------------------*/
+@media (min-width: 752px) {
+  html {
+    font-size: 18px;
+  }
+  .images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .featured {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .card {
+    width: 47%;
+  }
+  article {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    border: solid #F3B8BA 3px;
+    -webkit-box-shadow: 0 5px 10px #9BC3C3;
+            box-shadow: 0 5px 10px #9BC3C3;
+  }
+}
+
+@media (min-width: 860px) and (max-width: 1000px) {
+  nav {
+    display: block;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .btn-menu {
+    display: none;
+  }
+}
+
+/* ----------------------- MAXIMUM VIEWSPACE!!!!!!! ------------------------*/
+@media (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+  .max-width {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 15px;
+  }
+  .box {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 10px 20px;
+    padding-top: 5px;
+    border: 3px solid #F3B8BA;
+    -webkit-box-shadow: 0 5px 10px #F3B8BA;
+            box-shadow: 0 5px 10px #F3B8BA;
+    border-radius: 15px;
+    padding: 15px;
+    height: 400;
+  }
+  #game-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 410px;
+    width: 800px;
+    -webkit-box-shadow: 0 0 20px #F3B8BA;
+            box-shadow: 0 0 20px #F3B8BA;
+  }
+  .button-container {
+    margin: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  input[type=button] {
+    margin: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  article {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 85%;
+    margin: auto;
+    border: solid #F3B8BA 3px;
+    -webkit-box-shadow: 0 5px 10px #9BC3C3;
+            box-shadow: 0 5px 10px #9BC3C3;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

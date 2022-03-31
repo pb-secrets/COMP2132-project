@@ -1,0 +1,271 @@
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+
+
+$middleblue:#2e5a6b;
+$gold:#F8C708;
+$pink:#F3B8BA;
+$lightblue: #9BC3C3; 
+$darkblue: #0E242C;
+
+$gameFont: 'Mr Dafoe', cursive; 
+
+#game-title {
+    font-family: 'Mr Dafoe', cursive;
+}
+
+@mixin player-areas($display, $flexDirection, $roundedCorners, $borderColor) {
+    display: $display;
+    flex-direction: $flexDirection;
+    border-radius: $roundedCorners;
+    border: dotted $borderColor 5px;
+}
+
+@mixin gameFonts($gameFont, $fontColor, $fontSize) {
+    font-family: $gameFont;
+    color: $fontColor;
+    font-size: $fontSize;
+}
+
+
+@import url("normalize.css");
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+
+/* --------------- Website Colors --------------------*/
+
+
+
+
+/* ------------- General Styles ------------*/
+
+
+html {
+    font-size: 16px;
+    font-family: 'Rajdhani', sans-serif;
+    color: $lightblue;
+    box-sizing: border-box;
+    
+    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+header {
+    background-color: $middleblue;
+ 
+}
+
+body {
+    background-image: linear-gradient(315deg, #d4418e 0%, #0609c5 65%);
+    margin: 0;
+    height: 750px;
+    
+}
+
+h1, h2, h3, h4, h5, h6, p a {
+    color: $gold;
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.356);
+    text-align: center;
+    font-family: MrDafoe-Regular;
+    margin: 20px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+.button-container > * {
+    margin-left: 10px;
+}
+
+.alert {
+    background-color:#e4405f;
+    border: solid red 3px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.alert::before {
+    content: "⚠️"
+}
+
+.scoreTracker {
+    @include gameFonts($gameFont, $gold, 1.33em);
+}
+
+/*---------------------------- DICE -----------------------------*/
+.dice-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 250px;
+    height: 100px;
+
+}
+
+.dice {
+    width: 100px;
+}
+
+.results {
+    font-size: 28px;
+    margin-left: 10px;
+}
+
+#game-title {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 3em;
+    text-shadow: 0 5px 10px $gold;
+    
+}
+
+#close-popup{
+    display: flex;
+    margin: auto;
+    left: calc(98% - 26px);
+    
+}
+
+.pop-up {
+    border: 5px solid $gold;
+    position: fixed;
+    top: calc(48% - 117.5px);
+    left: calc(50% - 175px);
+    background-color: $darkblue;
+    width: 350px;
+    padding: 10px;
+    z-index: 5;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+    
+}
+
+.pop-up h3 {
+    font-family: $gameFont;
+}
+
+.pop-up.fade {
+    opacity: 1;
+}
+
+.game-over {
+    display: flex;
+    justify-content: center;
+}
+/* --------------------- Medium Viewport --------------------------*/
+
+@media (min-width: 752px)  {
+    
+    html {
+        font-size: 18px;
+    }
+
+
+
+    .images {
+        display: flex;
+        max-width: 100%;
+        justify-content: space-around;
+    }
+
+    .featured {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .card {
+        width: 47%;
+    }
+
+
+article {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, .1);
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    border: solid $pink 3px;
+    box-shadow: 0 5px 10px $lightblue;
+
+}
+
+}
+
+@media (min-width: 860px) and (max-width: 1000px) {
+    nav {
+        display: block;
+        
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .btn-menu {
+        display: none;
+ }
+ 
+}
+
+/* ----------------------- MAXIMUM VIEWSPACE!!!!!!! ------------------------*/
+
+@media (min-width: 1000px) {
+
+html {
+    font-size: 22px;
+}
+
+
+.max-width {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+    
+}
+.box {
+    justify-content: space-around;
+    margin: 10px 20px;
+    padding-top: 5px;
+    border: 3px solid $pink;
+    box-shadow: 0 5px 10px $pink;
+    border-radius: 15px;
+    padding: 15px;
+    height: 400;
+}
+
+#game-area {
+    display: flex;
+    height: 410px;
+    width: 800px;
+    box-shadow: 0 0 20px $pink;
+}
+
+.button-container{
+    margin: 10px;
+    display: flex;
+}
+
+input[type=button] {
+    margin: auto;
+    justify-content: space-between;
+    
+}
+
+article {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, .1);
+    width: 85%;
+    margin: auto;
+    border: solid $pink 3px;
+    box-shadow: 0 5px 10px $lightblue;
+
+}
+}
